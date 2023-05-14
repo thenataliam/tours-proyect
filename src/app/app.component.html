@@ -1,8 +1,6 @@
 <li *ngFor="let valor of X">
-    {{valor}}
-    <br>
-    <p>{{valor | video}}</p>
-    <br>
+   
+    
     <video width="320" height="240" controls>
         <source [src]="valor | video" type="video/mp4">
       </video>
