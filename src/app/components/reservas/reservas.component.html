@@ -1,1 +1,27 @@
-<p>reservas works!</p>
+
+
+<form (ngSubmit)="onSubmit()" #reservationForm="ngForm">
+  <label for="date">Fecha:  </label>
+  <input type="date" id="date" name="date" ngModel>
+  <br>
+  <label for="time">Hora:  </label>
+  <input type="time" id="time" name="time" ngModel>
+  <br>
+  <button type="button" class="btn btn-outline-primary" type="submit">Reservar</button>
+</form>
+<h1>...RESERVACIONES...</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">DIA</th>
+          <th scope="col">FECHA</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let reservation of reservations">
+        <th >{{ reservation.date }}</th>
+        <td>{{ reservation.time }}</td>
+      </tr>
+</table>
+<div *ngIf="alertMessage" class="alert" [ngClass]="'alert-' + alertType" role="alert">
+  {{ alertMessage }}
+</div>

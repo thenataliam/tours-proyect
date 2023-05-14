@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { ReservasComponent } from './components/reservas/reservas.component';
-import { TourListComponent } from './components/tour-list/tour-list.component';
+import { SearchComponent } from './components/search/search.component';
+import { VideoPipe } from './components/pipes/video.pipe';
+
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReservasComponent,
-    TourListComponent
+    SearchComponent,
+    VideoPipe,
+    
+    
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
